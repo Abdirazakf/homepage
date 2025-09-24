@@ -1,7 +1,7 @@
 {
-  "name": "web-dev-temp-repo",
+  "name": "Homepage",
   "version": "1.0.0",
-  "description": "Template repo for html/css/js projects",
+  "description": "A homepage demo that implements responsive design principle",
   "license": "ISC",
   "author": "Abdirazakf",
   "type": "module",
@@ -9,7 +9,8 @@
   "scripts": {
     "test": "jest",
     "start": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "git checkout gh-pages && git merge main --no-edit && npm run build && git add dist -f && git commit -m 'Deployment commit' && git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",

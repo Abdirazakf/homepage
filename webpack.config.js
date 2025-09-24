@@ -9,6 +9,11 @@ module.exports = {
         path: path.resolve(__dirname,"dist"),
         clean: true
     },
+    devServer: {
+        watchFiles: ['./src/template.html'],
+        hot: true,
+        open: true
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/template.html",
@@ -26,7 +31,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                use: "asset/resource"
+                type: "asset/resource"
             }
         ]
     }

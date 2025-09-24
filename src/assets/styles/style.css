@@ -22,6 +22,9 @@
 
 header {
     background-color: var(--header-color);
+    padding: 80px 20px 120px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%);
+    position: relative;
 }
 
 main {
@@ -228,6 +231,10 @@ footer > img {
 
 /* Mobile design */
 @media (max-width: 768px) {
+    header {
+        padding: 60px 15px 80px 15px;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%);
+    }
     main {
         padding: var(--spacing-small);
     }
